@@ -15,16 +15,17 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path='/' element={<MainLayout></MainLayout>}></Route>
-        <Route index element={<Home></Home>}></Route>
-        <Route path='/home' element={<Home></Home>}></Route>
-        <Route path='/about' element={<About></About>}></Route>
-        <Route path='/products' element={<Products></Products>}></Route>
-        <Route path='/products/:productId' element={<SingleProducts></SingleProducts>}></Route>
-        <Route path='/reviews' element={<Review></Review>}></Route>
-        <Route path='/dashboard' element={<Dashboards></Dashboards>}></Route>
-        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
-        <Route path='*' element={<NotFound></NotFound>}></Route>
+        <Route path='/' element={<MainLayout></MainLayout>}>
+          <Route index element={<Home></Home>}></Route>
+          <Route path='/home' element={<Home></Home>}></Route>
+          <Route path='/about' element={<About></About>}></Route>
+          <Route path='/products' element={<Products></Products>}></Route>
+          <Route path='/products/:productId' element={<SingleProducts></SingleProducts>}></Route>
+          <Route path='/reviews' element={<Review></Review>}></Route>
+          <Route path='/dashboard' element={<Dashboards></Dashboards>}></Route>
+          <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+          <Route path='*' element={<NotFound></NotFound>}></Route>
+        </Route>
       </Routes>
     </div>
   );
